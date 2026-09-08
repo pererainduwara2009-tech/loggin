@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login</title>
+
+    <link rel="stylesheet" href="log in.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- =========================
+             LEFT SIDE
+        ========================== -->
+
+        <div class="left-picture" id="leftPicture">
+
+            <div class="text-area" id="textArea">
+
+                <h1 class="heading" id="heading">
+                    Create. Customize. Ship.
+                </h1>
+
+                <hr>
+
+                <p class="par">
+                    Generate professional visual assets for your software
+                    <br>
+                    projects with AI-from icons and logos
+                    <br>
+                    to image packs.
+                </p>
+
+
+                <div class="inside" id="features">
+
+                    <ul>
+
+                        <li>
+                            <h3>Project-Ready Assets</h3>
+
+                            <p class="par">
+                                Create visuals designed specifically
+                                <br>
+                                for your apps and websites.
+                            </p>
+                        </li>
+
+
+                        <li>
+                            <h3>Generate in Seconds</h3>
+
+                            <p class="par">
+                                Turn your ideas into polished assets without
+                                <br>
+                                spending hours designing.
+                            </p>
+                        </li>
+
+
+                        <li>
+                            <h3>Complete Image Packs</h3>
+
+                            <p class="par">
+                                Generate matching icons, illustrations, logos and
+                                <br>
+                                graphics in one style.
+                            </p>
+                        </li>
+
+
+                        <li>
+                            <h3>Built for Developers</h3>
+
+                            <p class="par">
+                                Get the visual assets you need to make your
+                                <br>
+                                projects look professional.
+                            </p>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- ROBOT -->
+
+            <img
+                src="robot_pic.png"
+                alt="Robot Picture"
+                id="robotImage"
+            >
+
+        </div>
+
+
+        <!-- =========================
+             LOGIN SIDE
+        ========================== -->
+
+        <div class="login-or-signup" id="loginPanel">
+
+
+            <!-- TITLE -->
+
+            <div class="topic-form" id="loginTitle">
+
+                <h1>
+                    Welcome Back!
+                </h1>
+
+                <h4>
+                    Sign in to continue
+                </h4>
+
+            </div>
+
+
+            <!-- LOGIN FORM -->
+
+            <form
+                action=""
+                class="log-in-form"
+                id="loginForm"
+            >
+
+                <div class="inputs">
+
+                    <!-- EMAIL -->
+
+                    <div>
+
+                        <label for="email">
+                            E-mail address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="you@example.com"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- PASSWORD -->
+
+                    <div .duck>
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter your password"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- REMEMBER / FORGOT -->
+
+                <div
+                    class="fpassword-caccount"
+                    id="accountOptions"
+                >
+
+                    <div class="checkbox-area">
+
+                        <input
+                            type="checkbox"
+                            id="remember"
+                        >
+
+                        <label for="remember">
+                            Remember me
+                        </label>
+
+                    </div>
+
+
+                    <a
+                        href="#"
+                        id="forgotPassword"
+                    >
+                        Forgot password
+                    </a>
+
+                </div>
+
+
+                <!-- SIGN IN -->
+
+                <button
+                    type="submit"
+                    id="signInBtn"
+                    onclick="user_accoun()"
+                >
+                    Sign in
+                </button>
+
+            </form>
+
+
+            <!-- DIVIDER -->
+
+            <hr>
+
+            <label
+                class="division"
+                id="loginDivision"
+            >
+                or continue with
+            </label>
+
+
+            <!-- OTHER LOGIN OPTIONS -->
+
+            <div
+                class="other-login-options"
+                id="socialLoginOptions"
+            >
+
+                <button
+                    class="Gmail"
+                    id="googleLogin"
+                    type="button"
+                >
+                    G
+                </button>
+
+
+                <button
+                    class="github"
+                    id="githubLogin"
+                    type="button"
+                >
+                    Git
+                </button>
+
+
+                <button
+                    class="microsoft"
+                    id="microsoftLogin"
+                    type="button"
+                >
+                    M
+                </button>
+
+            </div>
+
+
+            <!-- CREATE ACCOUNT -->
+
+            <p id="createAccountText">
+
+                Don't have an account?
+
+                <a
+                    href="signup.html"
+                    id="createAccount"
+                >
+                    Create account
+                </a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="log in.js"></script>
+
+</body>
+
+</html>

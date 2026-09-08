@@ -1,0 +1,545 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #2563EB;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.left-picture {
+    width: 60%;
+    height: 100vh;
+
+    position: relative;
+    overflow: hidden;
+
+    background: #2563EB;
+
+    padding: 70px 40px 50px 65px;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* =========================
+   BACKGROUND GLOW
+========================= */
+
+.left-picture::before {
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    right: 5%;
+    top: 20%;
+
+    border-radius: 50%;
+
+    background: rgba(80, 160, 255, 0.35);
+
+    filter: blur(90px);
+
+    z-index: 0;
+}
+
+
+/* SECOND LIGHT */
+
+.left-picture::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    left: 20%;
+    bottom: -100px;
+
+    border-radius: 50%;
+
+    background: rgba(0, 100, 255, 0.35);
+
+    filter: blur(80px);
+
+    z-index: 0;
+}
+
+
+/* =========================
+   DECORATIVE RINGS
+========================= */
+
+.left-picture {
+    background-image:
+        radial-gradient(
+            circle at 75% 30%,
+            rgba(255,255,255,0.08) 0,
+            rgba(255,255,255,0.08) 1px,
+            transparent 2px
+        ),
+        radial-gradient(
+            circle at 75% 30%,
+            transparent 0,
+            transparent 120px,
+            rgba(255,255,255,0.08) 121px,
+            transparent 123px
+        ),
+        radial-gradient(
+            circle at 75% 30%,
+            transparent 0,
+            transparent 180px,
+            rgba(255,255,255,0.06) 181px,
+            transparent 183px
+        ),
+        radial-gradient(
+            circle at 65% 75%,
+            transparent 0,
+            transparent 130px,
+            rgba(255,255,255,0.08) 131px,
+            transparent 133px
+        );
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+.text-area {
+    width: 55%;
+
+    position: relative;
+
+    z-index: 5;
+
+    color: white;
+}
+
+.heading {
+    font-size: 42px;
+    line-height: 1.15;
+
+    margin-bottom: 18px;
+
+    color: white;
+}
+
+.text-area hr {
+    width: 75px;
+    height: 4px;
+
+    margin: 20px 0;
+
+    border: none;
+    border-radius: 5px;
+
+    background: white;
+}
+
+.par {
+    color: rgba(255,255,255,0.78);
+
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.inside {
+    margin-top: 35px;
+}
+
+.inside ul {
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+}
+
+.inside li {
+    margin-bottom: 22px;
+
+    padding-left: 18px;
+
+    border-left: 3px solid rgba(255,255,255,0.35);
+}
+
+.inside h3 {
+    color: white;
+
+    font-size: 16px;
+
+    margin-bottom: 4px;
+}
+
+.inside li .par {
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+
+/* =========================
+   ROBOT
+========================= */
+
+.left-picture > img {
+    position: absolute;
+
+    width: 52%;
+    max-width: 450px;
+
+    height: auto;
+
+    right: -5%;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    z-index: 3;
+
+    object-fit: contain;
+
+    filter: drop-shadow(
+        0 20px 35px rgba(0,0,0,0.18)
+    );
+}
+
+
+/* =========================
+   BOTTOM DOTS
+========================= */
+
+.left-picture .text-area::after {
+    content: "";
+
+    position: absolute;
+
+    width: 160px;
+    height: 90px;
+
+    left: -60px;
+    bottom: -180px;
+
+    background-image: radial-gradient(
+        circle,
+        rgba(255,255,255,0.22) 2px,
+        transparent 3px
+    );
+
+    background-size: 18px 18px;
+
+    opacity: 0.5;
+
+    z-index: -1;
+}
+
+
+/* =========================
+   SMALL GLOWING DOTS
+========================= */
+
+.left-picture img {
+    filter:
+        drop-shadow(0 20px 35px rgba(0,0,0,0.18))
+        drop-shadow(0 0 25px rgba(80,170,255,0.25));
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1200px) {
+
+    .left-picture {
+        padding-left: 40px;
+    }
+
+    .text-area {
+        width: 58%;
+    }
+
+    .heading {
+        font-size: 34px;
+    }
+
+    .left-picture > img {
+        width: 50%;
+        right: -3%;
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    .left-picture {
+        display: none;
+    }
+}
+
+/* LEFT SIDE 
+
+.left-picture {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-picture img {
+    width: 80%;
+    max-width: 500px;
+    display: block;
+}*/
+
+/* LOGIN SIDE */
+
+.login-or-signup {
+    width: 40%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #F8FAFC;
+
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+
+    box-shadow: -15px 0 25px rgba(20, 75, 194, 0.5);
+
+    padding: 50px;
+}
+
+
+/* TITLE */
+
+.topic-form {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.topic-form h1 {
+    font-size: 32px;
+    color: #0F172A;
+}
+
+.topic-form h4 {
+    margin-top: 8px;
+    color: #64748B;
+    font-weight: normal;
+}
+
+
+/* FORM */
+
+.log-in-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* INPUTS */
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.inputs div {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #334155;
+    margin-bottom: 7px;
+}
+
+.log-in-form input[type="email"],
+.log-in-form input[type="password"] {
+    width: 100%;
+    height: 45px;
+
+    border: 1px solid #CBD5E1;
+    border-radius: 7px;
+
+    padding: 0 15px;
+
+    font-size: 15px;
+
+    outline: none;
+    background-color: white;
+
+    box-sizing: border-box;
+}
+
+.log-in-form input:focus {
+    border-color: #2563EB;
+}
+
+
+/* REMEMBER + FORGOT PASSWORD */
+
+.fpassword-caccount {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 18px;
+}
+
+.checkbox-area {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.checkbox-area label {
+    font-size: 14px;
+    color: #475569;
+}
+
+.checkbox-area input {
+    width: 15px;
+    height: 15px;
+}
+
+.fpassword-caccount a {
+    color: #2563EB;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+
+/* SIGN IN BUTTON */
+
+.log-in-form button {
+    width: 100%;
+    height: 45px;
+
+    margin-top: 25px;
+
+    border: none;
+    border-radius: 7px;
+
+    background-color: #2563EB;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.log-in-form button:hover {
+    background-color: #1D4ED8;
+}
+
+
+/* DIVIDER */
+
+.login-or-signup hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #CBD5E1;
+
+    margin: 25px 0 15px;
+}
+
+.division {
+    color: #64748B;
+    font-size: 14px;
+}
+
+
+/* OTHER LOGIN BUTTONS */
+
+.other-login-options {
+    display: flex;
+    gap: 12px;
+
+    width: 100%;
+    margin-top: 15px;
+}
+
+.other-login-options button {
+    flex: 1;
+    height: 42px;
+
+    border: 1px solid #CBD5E1;
+    border-radius: 7px;
+
+    background-color: white;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.other-login-options button:hover {
+    background-color: #F1F5F9;
+}
+
+
+/* CREATE ACCOUNT */
+
+.login-or-signup > p {
+    margin-top: 25px;
+
+    font-size: 14px;
+    color: #64748B;
+}
+
+.login-or-signup > p a {
+    color: #2563EB;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .left-picture {
+        display: none;
+    }
+
+    .login-or-signup {
+        width: 100%;
+        border-radius: 0;
+        padding: 35px;
+    }
+}
